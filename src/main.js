@@ -18,7 +18,7 @@ function handleSubmit(event) {
     const query = event.currentTarget.elements.searchText;
     const trimmeredQuery = query.value.trim();
 
-    if (trimmeredQuery === "") {
+    if (!trimmeredQuery) {
         iziToast.info({
             title: "Please!",
             message: "Enter request!",
